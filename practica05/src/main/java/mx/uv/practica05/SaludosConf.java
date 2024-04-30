@@ -26,6 +26,7 @@ public class SaludosConf extends WsConfigurerAdapter{
         servlet.setTransformWsdlLocations(true);
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
+    
     @Bean(name="saludos")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema saludoSchema){
         DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
